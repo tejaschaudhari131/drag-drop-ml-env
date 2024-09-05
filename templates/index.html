@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag-n-Drop ML Environment</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Drag-n-Drop ML Environment</h1>
+    </header>
+    <main>
+        <div id="toolbox">
+            <h2>Components</h2>
+            <div>
+                <h3>Preprocessing</h3>
+                <button onclick="addPreprocessingStep('scale')">Scale Data</button>
+                <button onclick="addPreprocessingStep('normalize')">Normalize Data</button>
+                <button onclick="addPreprocessingStep('encode')">Encode Data</button>
+            </div>
+            <div>
+                <h3>Models</h3>
+                <button onclick="selectModel('logistic_regression')">Logistic Regression</button>
+                <button onclick="selectModel('random_forest')">Random Forest</button>
+                <!-- Add buttons for other models -->
+            </div>
+        </div>
+
+        <div id="pipeline">
+            <h2>Your Pipeline</h2>
+            <div id="steps">
+                <!-- Components added dynamically -->
+            </div>
+        </div>
+
+        <button onclick="trainModel()">Train Model</button>
+        <button onclick="exportModel()">Export Model</button>
+    </main>
+
+    <script src="/static/js/script.js"></script>
+</body>
+</html>
