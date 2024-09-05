@@ -12,7 +12,7 @@ function selectModel(model) {
 }
 
 function trainModel() {
-    const dataset = { /* dataset from user */ };
+    const dataset = {};  // Replace with actual dataset
     fetch('/train_model', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -23,7 +23,7 @@ function trainModel() {
 }
 
 function exportModel() {
-    const format = 'pickle';  // Example export format
+    const format = 'pickle';  // Replace with user selection for format
     fetch('/export_model', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
