@@ -1,0 +1,8 @@
+Flask
+scikit-learn
+pandas
+xgboost
+tensorflow
+onnx
+onnxruntime
+skl2onnx
