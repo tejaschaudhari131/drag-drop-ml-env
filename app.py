@@ -82,3 +82,20 @@ if __name__ == '__main__':
     if not os.path.exists(UPLOAD_FOLDER):
         os.makedirs(UPLOAD_FOLDER)
     app.run(debug=True)
+
+@app.route('/predict/<model_name>', methods=['POST'])
+def predict(model_name):
+    data = request.json  # Expecting input data in JSON format
+    inputs = data['inputs']  # The features for prediction
+
+    # Load the saved model
+    model = api_serving.load_model(model_name)
+
+    if model:
+        prediction = api_serving.make_prediction(model, inputs)
+        return jsonify({'prediction': prediction})
+    else:
+        return jsonify({'error': 'Model not found'}), 404
+
+if __name__ == '__main__':
+    app.run(debug=True)
