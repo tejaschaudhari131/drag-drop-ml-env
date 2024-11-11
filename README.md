@@ -2,6 +2,9 @@
 
 This project is a Scratch-like tool designed to help users implement machine learning pipelines using a drag-and-drop interface. It includes built-in tutorials for each concept, making it an educational tool for those new to machine learning. Additionally, the project now includes the ability to export trained models in multiple formats (`pickle`, `tensorflow`, `onnx`) and serves models via an API for real-time predictions.
 
+
+
+
 ## Features
 
 ### Drag-n-Drop Interface:
@@ -59,6 +62,8 @@ python app.py
 
 ### 4. Access the interface:
 Open your browser and go to `http://localhost:5000` to access the drag-and-drop interface.
+
+![image](https://github.com/user-attachments/assets/94f8d558-3984-49f0-b2db-447485702c09)
 
 ## Usage
 
